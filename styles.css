@@ -1,0 +1,146 @@
+@font-face {
+font-family: 'MandatoryFont';
+src: url(/fonts/mandatory-font/Mandatory-O2Vp.ttf);
+}
+
+@font-face {
+font-family: 'Skittles-n-beer';
+src: url(/fonts/skittles-n-beer-nf-font/SkittlesNBeerNf-lVRZ.ttf);
+}
+
+@font-face {
+font-family: 'Slugfest-font';
+src: url(/fonts/slugfest-font/Slugfest-vK54.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #484848;
+    font-family: 'mandatoryfont', sans-serif;
+    background-color: #ede6d6;
+    position: relative;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    z-index: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+        background-image: url('/pictures/textures/noise.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2; 
+    z-index: -1;
+    pointer-events: none;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'slugfest-font';
+    text-shadow: 1px 1px 2px white;
+}
+
+header:hover {
+    background-image: url('/pictures/drakeheader.jpg');
+    opacity: 0.8;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    flex: 1;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+ul {
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-family: 'slugfest-font';
+    text-shadow: 1px 1px 2px white;
+}
+
+footer nav ul {
+    list-style-type: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+footer:hover {
+    background-image: url('/pictures/drakeheader.jpg');
+    opacity: 0.8;
+}
+
+.content {
+    font-family: 'mandatoryfont', sans-serif;
+}
+
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    float: auto;
+    width: 360px;
+    height: 250px;
+}
