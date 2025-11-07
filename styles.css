@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     color: #484848;
-    font-family: 'mandatoryfont', sans-serif;
+    font-family: 'MandatoryFont', sans-serif;
     background-color: #ede6d6;
     position: relative;
     text-shadow: 1px 1px 2px rgb(255, 255, 255);
@@ -44,7 +44,7 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    font-family: 'slugfest-font';
+    font-family: 'Slugfest-font';
     text-shadow: 1px 1px 2px white;
 }
 
@@ -76,7 +76,7 @@ header nav ul li a {
 }
 
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
     flex: 1;
@@ -105,7 +105,7 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 40px;
-    font-family: 'slugfest-font';
+    font-family: 'Slugfest-font';
     text-shadow: 1px 1px 2px white;
 }
 
@@ -133,7 +133,7 @@ footer:hover {
 }
 
 .content {
-    font-family: 'mandatoryfont', sans-serif;
+    font-family: 'MandatoryFont', sans-serif;
 }
 
 
@@ -153,6 +153,7 @@ footer:hover {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     padding: 20px;
+    max-width: 800px;
 }
 
 .parent > div {
@@ -160,13 +161,34 @@ footer:hover {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.parent > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.parent > div a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.parent > div a:visited {
+    color: inherit;
 }
 
 .parent .div1 { 
     grid-area: 1 / 1 / 2 / 11; 
     text-align: center;
     font-size: 1.5em;
-    font-family: skittles-n-beer;
+    font-family: 'Skittles-n-beer';
+    background-image: url('pictures/textures/noise.avif');
+    opacity: 0.9;
+    background-color: mintcream;
+    text-shadow: rgb(255, 255, 255) 1px 1px 2px;
 }
 .parent .div2 { 
     grid-area: 2 / 1 / 4 / 3; 
@@ -176,52 +198,73 @@ footer:hover {
 }
 .parent .div3 { 
     grid-area: 2 / 3 / 4 / 5; 
+    background-color: rgb(135, 32, 32);
+    color: white;
+    text-align: center;
 }
 .parent .div4 { 
     grid-area: 2 / 5 / 4 / 7; 
+    background-color: rgb(129, 87, 5);
+    color: white;
+    text-align: center;
 }
 .parent .div5 { 
     grid-area: 2 / 7 / 4 / 9; 
+    background-color: rgb(33, 110, 203);
+    color: white;
 }
 .parent .div6 { 
     grid-area: 2 / 9 / 4 / 11; 
 }
 .parent .div7 { 
     grid-area: 4 / 1 / 6 / 3; 
+    background-color: rgb(215, 204, 204);
 }
 .parent .div8 { 
     grid-area: 4 / 3 / 6 / 5; 
+    background-color: darkgray;
 }
 .parent .div9 { 
     grid-area: 4 / 5 / 6 / 7; 
+    background-color: black;;
+    color: white;;
 }
 .parent .div10 { 
     grid-area: 4 / 7 / 6 / 9; 
+    background-color: rgb(170, 173, 178);;
 }
 .parent .div11 { 
     grid-area: 4 / 9 / 6 / 11; 
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 .parent .div12 { 
     grid-area: 6 / 1 / 8 / 3; 
+    background-color: black;
+    color: white;
 }
 .parent .div13 { 
     grid-area: 6 / 3 / 8 / 5; 
 }
 .parent .div14 { 
-    grid-area: 6 / 5 / 8 / 7; 
+    grid-area: 6 / 5 / 8 / 7;
+    color: white;
+    background-color: black;
 }
 .parent .div15 { 
     grid-area: 6 / 7 / 8 / 9; 
+    background-color: rgb(194, 161, 194);
 }
 .parent .div16 { 
     grid-area: 6 / 9 / 8 / 11; 
+    background-color: rgb(213, 182, 233);
 }
 .parent .div17 { 
     grid-area: 8 / 1 / 10 / 3; 
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
-.parent .div18 { 
-    grid-area: 8 / 3 / 10 / 5; 
-}
+
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -262,7 +305,35 @@ footer:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.albums-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.albums-container .parent {
+    flex: 0 1 auto;
+    max-width: 800px;
+}
+
+.spotify-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+}
+
 @media (max-width: 480px) {
     .box { max-width: 92%; padding: 0.75rem; }
     main { padding: 12px; margin: 20px auto; }
+}
+
+@media (max-width: 1024px) {
+    .spotify-sidebar {
+        display: none;
+    }
+    
+    .albums-container {
+        display: block;
+    }
 }
