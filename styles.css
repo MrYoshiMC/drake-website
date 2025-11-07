@@ -1,16 +1,16 @@
 @font-face {
 font-family: 'MandatoryFont';
-src: url(/fonts/mandatory-font/Mandatory-O2Vp.ttf);
+src: url(fonts/mandatory-font/Mandatory-O2Vp.ttf);
 }
 
 @font-face {
 font-family: 'Skittles-n-beer';
-src: url(/fonts/skittles-n-beer-nf-font/SkittlesNBeerNf-lVRZ.ttf);
+src: url(fonts/skittles-n-beer-nf-font/SkittlesNBeerNf-lVRZ.ttf);
 }
 
 @font-face {
 font-family: 'Slugfest-font';
-src: url(/fonts/slugfest-font/Slugfest-vK54.ttf);
+src: url(fonts/slugfest-font/Slugfest-vK54.ttf);
 }
 
 body {
@@ -31,7 +31,7 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-        background-image: url('/pictures/textures/noise.avif');
+        background-image: url('pictures/textures/noise.avif');
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.2; 
@@ -49,7 +49,7 @@ header {
 }
 
 header:hover {
-    background-image: url('/pictures/drakeheader.jpg');
+    background-image: url('pictures/drakeheader.jpg');
     opacity: 0.8;
 }
 
@@ -128,7 +128,7 @@ footer nav ul li a {
 
 
 footer:hover {
-    background-image: url('/pictures/drakeheader.jpg');
+    background-image: url('pictures/drakeheader.jpg');
     opacity: 0.8;
 }
 
